@@ -4,4 +4,9 @@ class WelcomeController < ApplicationController
 
     end
     
+    def home
+        
+    end
+
+
 end
