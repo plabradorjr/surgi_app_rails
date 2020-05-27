@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'quick-website-dark', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -58,12 +59,13 @@
             }, 300);
         });
     </script>
-   
 
   </head>
 
   <body>
 
+    <p class="notice"><%= notice %>
+    <p class="alert"><%= alert %>
 
     <%= yield %>
 
