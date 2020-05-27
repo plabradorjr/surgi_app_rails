@@ -1,0 +1,60 @@
+<header class="" id="header-main">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg shadow navbar-dark" id="navbar-main">
+            <div class="container">
+                <!-- Toggler -->
+                <button class="navbar-toggler order-lg-2 ml-n3 ml-lg-0" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Brand -->
+                <a class="navbar-brand order-lg-1" href="/home">
+                    <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/share.svg" id="navbar-logo">
+                    <span>SurgiApp</span>
+                </a>
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse navbar-collapse-overlay order-lg-3" id="navbar-main-collapse">
+                    <!-- Toggler -->
+                    <div class="position-relative">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <i data-feather="x"></i>
+                        </button>
+                    </div>
+                    <!-- Main navigation -->
+                    <ul class="navbar-nav ml-lg-auto mr-3">
+                        <!-- Overview -->
+                        <li class="nav-item nav-item-spaced d-none d-lg-block">
+                            <a class="nav-link" href="../../overview.html">
+                                Inventories
+                            </a>
+                        </li>
+
+                        <!-- Overview -->
+                        <li class="nav-item nav-item-spaced d-none d-lg-block">
+                            <a class="nav-link" href="../../overview.html">
+                                Memos
+                            </a>
+                        </li>
+
+                        <!-- Overview -->
+                        <li class="nav-item nav-item-spaced d-none d-lg-block">
+                            <a class="nav-link" href="../../overview.html">
+                                Create
+                            </a>
+                        </li>
+
+                        <li class="nav-item nav-item-spaced d-none d-lg-block">
+                            <a class="nav-link" href="../../overview.html">
+                                My Profile
+                            </a>
+                        </li>
+
+                        <li class="nav-item nav-item-spaced d-none d-lg-block">
+                            <%= link_to 'logout', destroy_user_session_path, class: 'nav-link', method: 'delete' %>
+                        </li>
+
+                    </ul>
+
+                </div> 
+            </div>
+        </nav>
+    </header>
