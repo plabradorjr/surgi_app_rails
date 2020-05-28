@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10 pt-4 bg-brand-facebook rounded">
+      <%= form_for(@inventory) do |f| %>
+        <div class="form-group row">
+          <%= f.label :name, class: "col-2 col-form-label text-white" %>
+          <div class="col-10">
+            <%= f.text_field :name, class: "form-control rounded", placeholder: "Name of inventory" %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label :location, class: "col-2 col-form-label text-white" %>
+          <div class="col-10"> 
+            <%= f.text_area :location, rows: 3, class: "form-control", placeholder: "Location of inventory" %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label "Additional Info", class: "col-2 col-form-label text-white" %>
+          <div class="col-10"> 
+            <%= f.text_area :info, rows: 10, class: "form-control rounded", placeholder: "Add any additional helpful info" %>
+          </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+          <%= f.submit class: "btn btn-outline-white btn-lg" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="mb-3">
+        <br>
+      <%= link_to '[ Cancel and return to inventorys listing ]', inventories_path, class: "text-info" %>
+    </div>
+  </div>
+</div>

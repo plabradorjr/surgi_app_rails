@@ -1,33 +1,23 @@
-<%= render '/welcome/navbar'%>
-
-<%= will_paginate @posts %>
-
-
-<div class="container">
-  <% @inventories.each do |inventory| %>
-    <div class="row justify-content-md-center">
-      <div class="col-8 mt-4">
-        <div class="card text-center shadow mb-5 bg-white rounded">
-          <div class="card-header font-italic">
-            <% if inventory.user %>
-              by <%= link_to inventory.user.username %>
-            <% end %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to inventory.name, inventory_path(inventory), class: "text-success" %></h5>
-            <p class="card-text"><%= truncate(inventory.location, length: 100) %></p>
-            <%= link_to "View", inventory_path(inventory), class: "btn btn-outline-success" %>
-            <% if inventory.user == current_user %>
-              <%= link_to "Edit", edit_inventory_path(inventory), class: "btn btn-outline-info" %>
-              <%= link_to "Delete", inventory_path(inventory), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
-            <% end %>
-          </div>
-          <div class="card-footer text-muted">
-            <small>Created <%= time_ago_in_words(inventory.created_at) %> ago, 
-            edited <%= time_ago_in_words(inventory.updated_at) %> ago</small>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <br><span style="font-size: 50px;"> 🎉</span><span class="h4 text-secondary">All Inventories</span><br><br>
         </div>
       </div>
+      <div class="col text-center">
+        <br>
+        
+        <table class="table table-dark bg-light-secondary">
+            <tbody>
+          <% @inventories.each do |i| %>
+            <tr>
+            <th scope="row"><a href="/inventories/<%=i.id%>" class="text-dark"><%= i.name.capitalize %></a></th>
+            
+            </tr>
+          <% end %>
+        </table>
+        <br><br>
+
+      </div>
     </div>
-  <% end %>
-</div>
+  </div>
