@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Service.create(name: "Neuro")
+Service.create(name: "Optho")
+Service.create(name: "Peds Surg")
+Service.create(name: "GI")
+Service.create(name: "GU")
+Service.create(name: "Ortho")
+Service.create(name: "CV")
+Service.create(name: "Transplant")
+Service.create(name: "Fetal")

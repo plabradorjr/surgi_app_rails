@@ -20,6 +20,7 @@ class InventoriesController < ApplicationController
             flash[:notice] = "Inventory was created successfully."
             redirect_to @inventory
         else
+            flash[:notice] = "There were errors creating the inventory. Make sure name and location is not blank"
             render 'new'
         end
     end
@@ -28,6 +29,17 @@ class InventoriesController < ApplicationController
         set_inventory
     end
 
+    def update
+        set_inventory
+        @inventory.update(inventory_params)
+        redirect_to inventory_path(@inventory)
+    end
+
+    def destroy
+        set_inventory
+        @inventory.destroy
+        redirect_to inventories_path
+    end
 
     private
 
