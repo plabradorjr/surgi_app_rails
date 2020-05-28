@@ -1,60 +1,132 @@
-<header class="" id="header-main">
-        <!-- Navbar -->
-        <nav class="navbar navbar-main navbar-expand-lg shadow navbar-dark" id="navbar-main">
-            <div class="container">
+<!-- Navbar success -->
+<!-- Header -->
+<header class="" id="header-main"><!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg shadow navbar-dark" id="navbar-main">
+        <div class="container">
+
+            <!-- Toggler -->
+            <button class="navbar-toggler order-lg-2 ml-n3 ml-lg-0" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Brand -->
+            <a class="navbar-brand order-lg-1" href="../../index.html">
+                <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/share.svg" id="navbar-logo">
+                <span>SurgiApp</span>
+            </a>
+
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse navbar-dark navbar-collapse-overlay order-lg-3" id="navbar-main-collapse">
+
                 <!-- Toggler -->
-                <button class="navbar-toggler order-lg-2 ml-n3 ml-lg-0" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Brand -->
-                <a class="navbar-brand order-lg-1" href="/home">
-                    <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/share.svg" id="navbar-logo">
-                    <span>SurgiApp</span>
-                </a>
-                <!-- Collapse -->
-                <div class="collapse navbar-collapse navbar-collapse-overlay order-lg-3" id="navbar-main-collapse">
-                    <!-- Toggler -->
-                    <div class="position-relative">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                            <i data-feather="x"></i>
-                        </button>
-                    </div>
-                    <!-- Main navigation -->
-                    <ul class="navbar-nav ml-lg-auto mr-3">
-                        <!-- Overview -->
-                        <li class="nav-item nav-item-spaced d-none d-lg-block">
-                            <a class="nav-link" href="../../overview.html">
-                                Inventories
-                            </a>
-                        </li>
+                <div class="position-relative">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <i data-feather="x"></i>
+                    </button>
+                </div>
 
-                        <!-- Overview -->
-                        <li class="nav-item nav-item-spaced d-none d-lg-block">
-                            <a class="nav-link" href="../../overview.html">
-                                Memos
-                            </a>
-                        </li>
+                <!-- Main navigation -->
+                <ul class="navbar-nav ml-lg-auto mr-3">
 
-                        <!-- Overview -->
-                        <li class="nav-item nav-item-spaced d-none d-lg-block">
-                            <a class="nav-link" href="../../overview.html">
-                                Create
-                            </a>
-                        </li>
 
-                        <li class="nav-item nav-item-spaced d-none d-lg-block">
-                            <a class="nav-link" href="../../overview.html">
-                                My Profile
-                            </a>
-                        </li>
+                    <!-- Services -->
+                    <!-- <li class="nav-item nav-item-spaced d-none d-lg-block">
+                        <a class="nav-link">Services</a>
+                    </li> -->
 
-                        <li class="nav-item nav-item-spaced d-none d-lg-block">
-                            <%= link_to 'logout', destroy_user_session_path, class: 'nav-link', method: 'delete' %>
-                        </li>
+                    <!-- Create menu -->
+                    <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle="hover">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <div class="dropdown-menu dropdown-menu-md p-0">
+                            <ul class="list-group list-group-flush px-lg-4">
+                                
+                                <li class="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
+                                    <a href="#" class="list-group-item list-group-item-action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <div class="d-flex">
+                                            <!-- SVG icon -->
+                                            <figure style="width: 20px;">
+                                                <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Code.svg" class="svg-inject img-fluid" style="height: 20px;">
 
-                    </ul>
+                                            </figure>
+                                            <!-- Media body -->
+                                            <div class="ml-3">
+                                                <h6 class="heading mb-0">Neuro</h6>
+                                                <p class="mb-0"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
 
-                </div> 
-            </div>
-        </nav>
-    </header>
+                                <li class="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
+                                    <a href="#" class="list-group-item list-group-item-action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <div class="d-flex">
+                                            <!-- SVG icon -->
+                                            <figure style="width: 20px;">
+                                                <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Code.svg" class="svg-inject img-fluid" style="height: 20px;">
+
+                                            </figure>
+                                            <!-- Media body -->
+                                            <div class="ml-3">
+                                                <h6 class="heading mb-0">Opthamology</h6>
+                                                <p class="mb-0"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>     
+
+                    </li>
+
+                    <!-- Profile menu -->
+                    <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle="hover">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile</a>
+                        <div class="dropdown-menu dropdown-menu-md p-0">
+                            <ul class="list-group list-group-flush px-lg-4">
+                                
+                                <li class="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
+                                    <a href="#" class="list-group-item list-group-item-action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <div class="d-flex">
+                                            <!-- SVG icon -->
+                                            <figure style="width: 20px;">
+                                                <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Code.svg" class="svg-inject img-fluid" style="height: 20px;">
+
+                                            </figure>
+                                            <!-- Media body -->
+                                            <div class="ml-3">
+                                                <h6 class="heading mb-0">Settings</h6>
+                                                <p class="mb-0">Edit username and password</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
+                                    <a href="/users/sign_out" method="delete" class="list-group-item list-group-item-action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <div class="d-flex">
+                                            <!-- SVG icon -->
+                                            <figure style="width: 20px;">
+                                                <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Code.svg" class="svg-inject img-fluid" style="height: 20px;">
+
+                                            </figure>
+                                            <!-- Media body -->
+                                            <div class="ml-3">
+                                                <h6 class="heading mb-0">Logout</h6>                        
+                                                <p class="mb-0"></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>     
+
+                    </li>
+
+                </ul>
+
+            </div> <!-- end of collapse -->
+        </div> <!-- end of container -->
+    </nav>
+</header>
