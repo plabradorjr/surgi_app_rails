@@ -48,7 +48,7 @@ class InventoriesController < ApplicationController
     end
 
     def inventory_params
-        params.require(:inventory).permit(:name, :location, :info)
+        params.require(:inventory).permit(:name, :location, :info, category_ids: [])
     end
 
     def require_same_user
