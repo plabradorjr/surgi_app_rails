@@ -12,27 +12,27 @@
         <div class="form-group row">
           <%= f.label :location, class: "col-2 col-form-label text-white" %>
           <div class="col-10"> 
-            <%= f.text_area :location, rows: 3, class: "form-control", placeholder: "Location of inventory" %>
+            <%= f.text_area :location, rows: 2, class: "form-control", placeholder: "Location of inventory" %>
           </div>
         </div>
 
         <div class="form-group row">
           <%= f.label "Additional Info", class: "col-2 col-form-label text-white" %>
           <div class="col-10"> 
-            <%= f.text_area :info, rows: 10, class: "form-control rounded", placeholder: "Add any additional helpful info" %>
+            <%= f.text_area :info, rows: 3, class: "form-control rounded", placeholder: "Add any additional helpful info" %>
           </div>
         </div>
 
-
-        <div class="form-group">
-          <div class="row">
-            <div class="col-sm-offset-2 col-sm-8">
-              <%= f.collection_check_boxes :service_ids, Service.all, :id, :name do |cb| %>
-              <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text + "    " } %>
-              <% end %>
-            </div>
+        <!-- services -->
+        <div class="form-group row">
+          <%= f.label :service, class: "col-2 col-form-label text-white" %>
+          <div class="col-10"> 
+            <%= f.collection_select(:service_ids, Service.all, :id, :name,
+            { prompt: "press and hold ctrl to choose multiple services"}, { multiple: true, size: 10, class: "custom-select" }) %>
           </div>
         </div>
+
+       
 
         <div class="form-group row justify-content-center">
           <%= f.submit class: "btn btn-outline-white btn-lg mt-3" %>
