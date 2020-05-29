@@ -67,10 +67,7 @@
 
   <body>
 
-    <% if (notice != nil) || (alert != nil) %>
-    <p class="notice"><%= notice %>
-    <p class="alert"><%= alert %>
-    <% end %>
+    <%= render 'layouts/messages' %>
 
     <%= yield %>
 
