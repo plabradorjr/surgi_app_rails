@@ -31,8 +31,14 @@ class InventoriesController < ApplicationController
 
     def update
         set_inventory
-        @inventory.update(inventory_params)
-        redirect_to inventory_path(@inventory)
+        if @inventory.update(inventory_params)
+            flash[:notice] = "Updated successfully"
+            redirect_to inventory_path(@inventory)
+        else
+            flash[:notice] = "unsuccessful update. try again"
+            redirect_to inventory_path(@inventory)
+
+        end
     end
 
     def destroy
