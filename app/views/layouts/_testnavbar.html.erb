@@ -1,8 +1,11 @@
 <div class="container bg-dark-transparent">
 
+    <div class="container bg-light rounded">
+        <%= render 'layouts/messages' %>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-        <a class="navbar-brand text-white" href="#">SurgiApp</a>
+        <a class="navbar-brand text-white" href="/">SurgiWiki</a>
         <button class="navbar-toggler bg-dark-neutral" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -13,23 +16,47 @@
 
             <div class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav mr-auto">
+
                     <li class="nav-item dropdown text-white">
                         <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Inventories
                         </a>
                         <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="/inventories">View inventories</a>
                         <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="/inventories/new">Create inventory</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Link</a>
+
+
+                    <li class="nav-item dropdown text-white">
+                        <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Memos
+                        </a>
+                        <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">View memos</a>
+                        <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
+                        <a class="dropdown-item" href="#">Create memo</a>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <%= link_to "Logout", destroy_user_session_path, :class => "nav-link text-white", :method => "delete" %>
+
+                    <li class="nav-item dropdown text-white">
+                        <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hi, <%=current_user.username.split.map(&:capitalize).join(' ')%>
+                        </a>
+                        <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="users/edit">Edit Profile</a>
+                        <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
+                        <%= link_to "Logout", destroy_user_session_path, :class => "dropdown-item text-white", :method => "delete" %>
+                        </div>
                     </li>
+
+                    <!-- use code below for future links
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><insert text here</a>
+                    </li>
+                    -->
+
                 </ul>
             </div>
 

@@ -67,7 +67,7 @@
 
   <body>
 
-    <%= render 'layouts/testnavbar' %>
+    <%= render 'layouts/testnavbar' if current_user %>
 
     <%= yield %>
 
