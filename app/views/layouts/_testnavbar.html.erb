@@ -28,7 +28,7 @@
                         <a class="nav-link text-white" href="#">Link</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Link</a>
+                        <%= link_to "Logout", destroy_user_session_path, :class => "nav-link text-white", :method => "delete" %>
                     </li>
                 </ul>
             </div>
