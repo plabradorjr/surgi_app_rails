@@ -31,6 +31,7 @@ gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'will_paginate', '~> 3.1.0'
 
+gem 'omniauth'
 gem 'omniauth-twitter'
 
 

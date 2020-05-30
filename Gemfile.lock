@@ -238,6 +238,7 @@ DEPENDENCIES
   devise-bootstrap-views (~> 1.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  omniauth
   omniauth-twitter
   pg (~> 0.20)
   puma (~> 4.1)
