@@ -17,10 +17,10 @@ class InventoriesController < ApplicationController
         @inventory = Inventory.new(inventory_params)
         @inventory.user = current_user
         if @inventory.save
-            flash[:notice] = "Inventory was created successfully."
+            flash[:success] = "Successfully Saved! Woot!"
             redirect_to @inventory
         else
-            flash[:notice] = "There were errors creating the inventory. Make sure name and location is not blank"
+            flash[:notice] = "Sorry, 'Name' and 'Location' cannot be blank."
             render 'new'
         end
     end

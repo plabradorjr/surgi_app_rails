@@ -1,21 +1,19 @@
-<%= render 'welcome/navbar' %>
-
 <div>
 <h2 class="text-center mt-4"><%= @inventory.name %></h2>
 
 <div class="container">
-  <div class="row justify-content-md-center">
+  <div class="row justify-content-center">
     <div class="col-8 mt-4">
-      <div class="card text-center shadow mb-5 bg-light-dark rounded">
+      <div class="card text-center shadow mb-5 bg-gradient-dark rounded">
 
         <div class="card-body">
-          <h5 class="text-info">Location:</h5>
+          <h5 class="text-white">Location:</h5>
           <div class="card-text text-center text-white"><%= @inventory.location %></div>
         </div>
         
         <%if @inventory.info != ""  %>
           <div class="card-body">
-            <h5 class="text-info">More info:</h5>
+            <h5 class="text-white">More info:</h5>
             <div class="card-text text-center text-white"><%= @inventory.info %></div>
             <br>
           </div>
@@ -23,9 +21,9 @@
 
         <div>
         <% if @inventory.services.any? %>
-            <h5 class="text-info">Services:</h5>
+            <h5 class="text-white">Services:</h5>
             <%@inventory.services.each do |i|%>
-            <span class="badge badge-dark"><%= i.name %></span>
+            <span class="badge badge-secondary"><%= i.name %></span>
             <% end %>
             </br>
             </br>
@@ -38,8 +36,8 @@
           edited <%= time_ago_in_words(@inventory.updated_at) %> ago</small>
           </br>
           </br>
-          <%= link_to "Edit", edit_inventory_path(@inventory), class: "btn-sm btn-info" %>
-          <%= link_to "Delete", inventory_path(@inventory), class: "btn-sm btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+          <%= link_to "Edit", edit_inventory_path(@inventory), class: "btn-sm btn-white" %>
+          <%= link_to "Delete", inventory_path(@inventory), class: "btn-sm btn-white", method: :delete, data: {confirm: "Are you sure?"} %>
         </div>
       </div>
     </div>

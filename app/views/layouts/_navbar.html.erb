@@ -1,131 +1,65 @@
-<!-- Navbar success -->
-<!-- Header -->
-<header class="" id="header-main"><!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg shadow navbar-dark" id="navbar-main">
-        <div class="container">
+<div class="container bg-dark-transparent">
 
-            <!-- Toggler -->
-            <button class="navbar-toggler order-lg-2 ml-n3 ml-lg-0" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container bg-light rounded">
+        <%= render 'layouts/messages' %>
+    </div>
 
-            <!-- Brand -->
-            <a class="navbar-brand order-lg-1" href="/home">
-                <span>SurgiApp</span>
-            </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand text-white" href="/">SurgiWiki</a>
+        <button class="navbar-toggler bg-dark-neutral" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Collapse -->
-            <div class="collapse navbar-collapse navbar-dark navbar-collapse-overlay order-lg-3" id="navbar-main-collapse">
+        <div class="collapse navbar-collapse bg-transparent rounded pl-4" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
 
-                <!-- Toggler -->
-                <div class="position-relative">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <i data-feather="x"></i>
-                    </button>
-                </div>
+            <div class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
 
-                <!-- Main navigation -->
-                <ul class="navbar-nav ml-lg-auto mr-3">
-
-
-                    <!-- Services -->
-                    <!-- <li class="nav-item nav-item-spaced d-none d-lg-block">
-                        <a class="nav-link">Services</a>
-                    </li> -->
-
-                    <!-- Create menu -->
-                    <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle="hover">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-                        <div class="dropdown-menu dropdown-menu-md p-0">
-                            <ul class="list-group list-group-flush px-lg-4">
-                                
-                                <li class="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-                                    <a href="#" class="list-group-item list-group-item-action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <div class="d-flex">
-                                            <!-- SVG icon -->
-                                            <figure style="width: 20px;">
-                                                <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Code.svg" class="svg-inject img-fluid" style="height: 20px;">
-
-                                            </figure>
-                                            <!-- Media body -->
-                                            <div class="ml-3">
-                                                <h6 class="heading mb-0">Neuro</h6>
-                                                <p class="mb-0"></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li class="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-                                    <a href="#" class="list-group-item list-group-item-action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <div class="d-flex">
-                                            <!-- SVG icon -->
-                                            <figure style="width: 20px;">
-                                                <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Code.svg" class="svg-inject img-fluid" style="height: 20px;">
-
-                                            </figure>
-                                            <!-- Media body -->
-                                            <div class="ml-3">
-                                                <h6 class="heading mb-0">Opthamology</h6>
-                                                <p class="mb-0"></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                        </div>     
-
+                    <li class="nav-item dropdown text-white">
+                        <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Inventories
+                        </a>
+                        <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/inventories">View inventories</a>
+                        <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
+                        <a class="dropdown-item" href="/inventories/new">Create inventory</a>
+                        </div>
                     </li>
 
-                    <!-- Profile menu -->
-                    <li class="nav-item nav-item-spaced dropdown dropdown-animate" data-toggle="hover">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile</a>
-                        <div class="dropdown-menu dropdown-menu-md p-0">
-                            <ul class="list-group list-group-flush px-lg-4">
-                                
-                                <li class="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-                                    <a href="#" class="list-group-item list-group-item-action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <div class="d-flex">
-                                            <!-- SVG icon -->
-                                            <figure style="width: 20px;">
-                                                <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Code.svg" class="svg-inject img-fluid" style="height: 20px;">
 
-                                            </figure>
-                                            <!-- Media body -->
-                                            <div class="ml-3">
-                                                <h6 class="heading mb-0">Settings</h6>
-                                                <p class="mb-0">Edit username and password</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li class="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-                                    <a href="/users/sign_out" method="delete" class="list-group-item list-group-item-action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <div class="d-flex">
-                                            <!-- SVG icon -->
-                                            <figure style="width: 20px;">
-                                                <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Code.svg" class="svg-inject img-fluid" style="height: 20px;">
-
-                                            </figure>
-                                            <!-- Media body -->
-                                            <div class="ml-3">
-                                                <h6 class="heading mb-0">Logout</h6>                        
-                                                <p class="mb-0"></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                        </div>     
-
+                    <li class="nav-item dropdown text-white">
+                        <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Memos
+                        </a>
+                        <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">View memos</a>
+                        <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
+                        <a class="dropdown-item" href="#">Create memo</a>
+                        </div>
                     </li>
+
+                    <li class="nav-item dropdown text-white">
+                        <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hi, <%=current_user.username.split.map(&:capitalize).join(' ')%>
+                        </a>
+                        <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="users/edit">Edit Profile</a>
+                        <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
+                        <%= link_to "Logout", destroy_user_session_path, :class => "dropdown-item text-white", :method => "delete" %>
+                        </div>
+                    </li>
+
+                    <!-- use code below for future links
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><insert text here</a>
+                    </li>
+                    -->
 
                 </ul>
+            </div>
 
-            </div> <!-- end of collapse -->
-        </div> <!-- end of container -->
+        </div>
     </nav>
-</header>
+</div>
