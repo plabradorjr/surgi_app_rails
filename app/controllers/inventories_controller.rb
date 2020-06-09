@@ -2,7 +2,11 @@ class InventoriesController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @inventories = Inventory.paginate(page: params[:page], per_page: 5)
+        if params[:user_id]
+            @inventories = User.find(params[:user_id]).inventories.paginate(page: params[:page], per_page: 5)
+        else
+            @inventories = Inventory.paginate(page: params[:page], per_page: 5)
+        end
     end
 
     def show
