@@ -3,7 +3,7 @@
 # This is a Flatiron School Project on Ruby-on-Rails Framework
 
 # Installation
-After checking out the repo, run bundle install to install dependencies.
+After checking out the repo, run `bundle install` to install dependencies.
 
 To view app on your local host, run `rails s` and head to the specified port.
 
