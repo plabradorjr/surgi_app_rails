@@ -2,6 +2,11 @@
 
 # This is Flatiron School Project on Ruby on Rails Framework
 
+# Installation
+After checking out the repo, run bundle install to install dependencies.
+
+To view app on your local host, run `rails s` and head to the specified port.
+
 ## Specs: 
 
 - [x]  Using Ruby on Rails for the project
@@ -45,16 +50,8 @@ The goal is to help nurses and surgical techs grow, regardless of experience lev
 
 > “We don't rise to the level of our expectations, we fall to the level of our training.” ― Archilochus
 
-# Installation
-After checking out the repo, run bundle install to install dependencies.
-
-To view app on your local host, run `rails s` and head to the specified port.
-
 ## Design overview
 SurgiApp is deliberately designed so that collaboration is key to its usefulness. Anyone can edit any entries. Without other peoples' contributions, this app leads nowhere, and information will remain outdated.
-
-## Database
-insert database picture here
 
 ## Contributing
 This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
