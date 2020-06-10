@@ -28,7 +28,7 @@
                             <a class="dropdown-item" href="/services">All Services</a>
                                 <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4">
                                 </div>
-                            <a class="dropdown-item" href="">All Memos</a>
+                            <a class="dropdown-item" href="/memos">All Memos</a>
                         </div>
                     </li>
 
@@ -40,13 +40,13 @@
                         <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<%=new_user_inventory_path(current_user)%>">Create Inventory</a>
                         <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
-                        <a class="dropdown-item" href="#">Create Memo</a>
+                        <a class="dropdown-item" href="<%=new_user_memo_path(current_user)%>">Create Memo</a>
                         </div>
                     </li>
 
                     <li class="nav-item dropdown text-white">
                         <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <%=current_user.username.split.map(&:capitalize).join(' ')%> 😎
+                        <%= current_user.username %> 😎
                         </a>
                         <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<%=edit_user_registration_path(current_user)%>">Edit Profile</a>
