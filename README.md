@@ -29,7 +29,7 @@ Confirm:
 - [x]  Views use partials if appropriate
 
 # What is it?
-SurgiWiki is an open-content collaborative database. A simple content management system (CMS). This Minimum Viable Product is designed to for nurses and surgical techs keep track of surgical equipments to easily find their exact locations, list of memos for frequently asked questions, etc.
+SurgiWiki is an open-content collaborative database. A simple content management system (CMS). This Minimum Viable Product is designed for nurses and surgical techs as an easy way to answer your frequently asked questions. 
 
 # Purpose
 
