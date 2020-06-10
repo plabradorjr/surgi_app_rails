@@ -12,5 +12,11 @@ class WelcomeController < ApplicationController
         
     end
 
+    def search
+        x = params[:search]
+        @inventory_results = Inventory.where("name LIKE?", "%#{x}%")
+        @memo_results = Memo.where("title LIKE?", "%#{x}%")
+    end
+
 
 end

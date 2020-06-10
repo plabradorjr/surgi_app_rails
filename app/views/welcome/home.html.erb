@@ -7,7 +7,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <h2 class="mb-4 text-center text-white">How can we help?</h2>
-                    <form>
+
+                    
+                    <form action="/search" method="get">
                         <div class="form-group bg-neutral rounded-pill mb-0 px-2 py-2 shadow">
                             <div class="row">
                                 <div class="col">
@@ -15,15 +17,19 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text bg-transparent border-0"><i data-feather="search"></i></span>
                                         </div>
-                                        <input type="text" class="form-control form-control-flush shadow-none" placeholder="Search for answers ...">
+                                        <input class="form-control form-control-flush shadow-none" type="text" name="search" placeholder="Search for answers ...">
+
+                                        <div class="col-auto">
+                                        <button class="btn btn-block btn-dark rounded-pill" type="submit">Search</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-block btn-dark rounded-pill">Search</button>
                                 </div>
                             </div>
                         </div>
                     </form>
+                    
+
+
                 </div>
             </div>
         </div>
@@ -94,3 +100,4 @@
             </svg>
         </div>
     </section>
+

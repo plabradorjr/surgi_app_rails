@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   get '/home', to: 'welcome#home'
 
+  get '/search', to: 'welcome#search', as: 'search'
+
 end
