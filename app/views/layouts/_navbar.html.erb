@@ -19,33 +19,34 @@
 
                     <li class="nav-item dropdown text-white">
                         <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Inventories
+                        View
                         </a>
                         <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/inventories">View inventories</a>
+                        <a class="dropdown-item" href="/inventories">All Inventories</a>
                         <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
-                        <a class="dropdown-item" href="/inventories/new">Create inventory</a>
+                        <a class="dropdown-item" href="">All Memos</a>
                         </div>
                     </li>
 
 
                     <li class="nav-item dropdown text-white">
                         <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Memos
+                        Create
                         </a>
                         <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">View memos</a>
+                        <a class="dropdown-item" href="<%=new_user_inventory_path(current_user)%>">Create Inventory</a>
                         <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
-                        <a class="dropdown-item" href="#">Create memo</a>
+                        <a class="dropdown-item" href="#">Create Memo</a>
                         </div>
                     </li>
 
                     <li class="nav-item dropdown text-white">
                         <a class="nav-link dropdown text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Hi, <%=current_user.username.split.map(&:capitalize).join(' ')%>
+                        <%=current_user.username.split.map(&:capitalize).join(' ')%> 😎
                         </a>
                         <div class="dropdown-menu bg-dark-neutral rounded pl-4 pr-4" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="users/edit">Edit Profile</a>
+                        <a class="dropdown-item" href="<%=edit_user_registration_path(current_user)%>">Edit Profile</a>
+                        <%= link_to "My Inventories", user_inventories_path(current_user), class: "dropdown-item text-white"%>
                         <div class="dropdown-divider bg-dark-neutral rounded pl-4 pr-4"></div>
                         <%= link_to "Logout", destroy_user_session_path, :class => "dropdown-item text-white", :method => "delete" %>
                         </div>

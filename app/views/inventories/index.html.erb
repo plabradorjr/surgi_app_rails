@@ -3,8 +3,14 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <br><span style="font-size: 50px;"> 🎉</span><span class="h4 text-secondary">All Inventories</span><br><br>
+        <% if params[:user_id]%>
+        <br><span class="h4 text-secondary"> <%= "🤓 " + @user.username + "'s "%> </span><span class="h4 text-secondary">Inventories 🤓</span><br><br>
+        <%else%>
+        <br><span style="font-size: 50px;"> 🎉 &nbsp; </span><span class="h4 text-secondary">All Inventories</span><br><br>
+        <%end%>
         </div>
+
+
       </div>
       <div class="col text-center">
         <br>

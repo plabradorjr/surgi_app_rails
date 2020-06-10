@@ -23,7 +23,7 @@
         <% if @inventory.services.any? %>
             <h5 class="text-white">Services:</h5>
             <%@inventory.services.each do |i|%>
-            <span class="badge badge-secondary"><%= i.name %></span>
+            <span class="badge badge-warning"><%=link_to i.name.upcase, service_path(i) %></span>
             <% end %>
             </br>
             </br>

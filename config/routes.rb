@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :services
   resources :inventories, except: [:new]
-  resources :users, only: [:index, :show] do
+  resources :users, only: [:index] do
     resources :inventories, only: [:index, :new]
   end
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' } 

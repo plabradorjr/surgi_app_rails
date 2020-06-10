@@ -1,0 +1,27 @@
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <br><span class="h4 text-secondary"><%=@service.name + " Inventories"%></span><br><br>
+        </div>
+
+
+      </div>
+      <div class="col text-center">
+        <br>
+        
+        <table class="table table-dark bg-light-secondary">
+            <tbody>
+          <% @service.inventories.each do |i| %>
+            <tr>
+            <th scope="row"><a href="/inventories/<%=i.id%>" class="text-dark"><%= i.name.upcase %></a></th>
+            
+            </tr>
+          <% end %>
+        </table>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
