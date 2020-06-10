@@ -388,6 +388,9 @@ textarea
     overflow: auto;
 
     resize: vertical;
+
+    overflow-y: scroll;
+
 }
 
 fieldset
@@ -36353,3 +36356,7 @@ Advanced example - Customized layout
 }
 
 /*# sourceMappingURL=quick-website-dark.css.map */
+
+textarea {
+    overflow-y: scroll;
+}
