@@ -1,6 +1,6 @@
-# SurgiWiki v0
+# 🦦 SurgiWiki v0.0
 
-# This is Flatiron School Project on Ruby on Rails Framework
+# This is a Flatiron School Project on Ruby on Rails Framework
 
 # Installation
 After checking out the repo, run bundle install to install dependencies.
