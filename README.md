@@ -5,9 +5,12 @@
 # Installation
 After checking out the repo, run `bundle install` to install dependencies.
 
-To view app on your local host,
+To view app on your local host
+
 run `rails db:migrate`
+
 next `rails db:seed`
+
 then `rails s` and head to the specified port.
 
 ## Specs: 
