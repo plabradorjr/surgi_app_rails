@@ -22,7 +22,7 @@ class InventoriesController < ApplicationController
         @inventory = Inventory.new(inventory_params)
         @inventory.user = current_user
         if @inventory.save
-            flash[:success] = "Successfully Saved! Woot!"
+            flash[:success] = "Successfully Saved Inventory! Woot!"
             redirect_to @inventory
         else
             flash[:notice] = "Sorry, 'Name' and 'Location' cannot be blank."
@@ -48,8 +48,13 @@ class InventoriesController < ApplicationController
 
     def destroy
         set_inventory
-        @inventory.destroy
-        redirect_to inventories_path
+        if current_user == @inventory.user
+            @inventory.destroy
+            redirect_to inventories_path
+        else
+            flash[:alert] = "You can only delete your own inventory"
+            redirect_to @inventory
+        end
     end
 
     private
@@ -64,7 +69,7 @@ class InventoriesController < ApplicationController
 
     def require_same_user
         if current_user != @inventory.user
-            flash[:alert] = "You can only edit or delete your own inventory"
+            flash[:alert] = "Sorry, You can only delete your own inventory"
             redirect_to @inventory
         end
     end
