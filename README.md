@@ -29,14 +29,14 @@ Confirm:
 - [x]  Views use partials if appropriate
 
 # What is it?
-SurgiWiki is an open-content collaborative database. A simple content management system (CMS). This Minimum Viable Product is designed for nurses and surgical techs as an easy way to answer your frequently asked questions. 
+SurgiWiki is an open-content collaborative database. A simple content management system (CMS). This Minimum Viable Product is designed for nurses and surgical techs as an easy way to answer their frequently asked questions. 
 
 # Purpose
 
 ## Problem Overview
-Put yourself in the shoes of newly hired surgical tech or intra-op registered nurse. This app is built for you. Within my current job as an OR nurse, there are millions worth of medical supplies and equipments stored in multiple scattered places. None of our storage areas are exactly identical in layouts. For newer staffs, it becomes very easy to get lost trying to find equipments.
+Put yourself in the shoes of newly hired surgical tech or intra-op registered nurse. You have no idea where things are located. You have so many questions about a specific surgical procedure in your mind. This app is built for you.
 
-Rather than focusing on patient care or other medical related tasks, we continually lose time trying to find simple items. There are no electronic documentations for supplies and its locations. It's a simple problem that can be solved with a ruthlessly minimalistic CMS. Our department will always have new hires that can benefit from a search engine and database to effectively find a specific item.
+Rather than focusing on patient care or other medical related tasks, we continually lose time trying to find simple items. There are no electronic documentations for supplies and frequently asked questions. It's a simple problem that can be solved with a ruthlessly minimalistic CMS. Our department will always have new hires that can benefit from a search engine and database to effectively answer thier questions.
 
 ## Goal
 The goal is to help nurses and surgical techs grow, regardless of experience level. The more we contribute and organize our information, the better off we'll be. More data is not always better, what we are really looking for is forward-motion.
