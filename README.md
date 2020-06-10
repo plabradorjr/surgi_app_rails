@@ -34,9 +34,9 @@ SurgiWiki is an open-content collaborative database. A simple content management
 # Purpose
 
 ## Problem Overview
-Put yourself in the shoes of newly hired surgical tech or intra-op registered nurse. You have no idea where things are located. You have so many questions about a specific surgical procedure in your mind. This app is built for you.
+Put yourself in the shoes of a newly hired surgical tech or intra-op registered nurse. You have no idea where things are located. You have so many questions about a specific surgical procedure in your mind. Rather than focusing on patient care or other medical related tasks, you continually lose time trying to find simple items. There are no electronic documentations for supplies and frequently asked questions.
 
-Rather than focusing on patient care or other medical related tasks, we continually lose time trying to find simple items. There are no electronic documentations for supplies and frequently asked questions. It's a simple problem that can be solved with a ruthlessly minimalistic CMS. Our department will always have new hires that can benefit from a search engine and database to effectively answer thier questions.
+This app is built for you. SurgiWiki solves a recurring problem with a ruthlessly minimalistic CMS. Our department will always have new hires that can benefit from a search engine and database to effectively answer thier questions.
 
 ## Goal
 The goal is to help nurses and surgical techs grow, regardless of experience level. The more we contribute and organize our information, the better off we'll be. More data is not always better, what we are really looking for is forward-motion.
