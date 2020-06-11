@@ -6,6 +6,8 @@ class Inventory < ApplicationRecord
 
     validates :name, presence: true, length: { minimum: 1, maximum: 50 }
     validates :location, presence: true, length: { minimum: 1, maximum: 100 }
+    validates_uniqueness_of :name, :case_sensitive => false
+
 
     mount_uploader :picture, PictureUploader
 
