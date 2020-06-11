@@ -6,7 +6,7 @@
     <%if @inventory.picture? %>
       <%= image_tag(@inventory.picture.url, class: "card-img-top", style: "max-width: 500px; max-height: 500px;")%>
     <%else%>
-      <img class="card-img-top" src="../../quick-ui/src/assets/img/theme/light/no-img-upload-yet.jpg" alt="no image" style="max-width: 400px; max-height: 400px;">
+      <img class="card-img-top" src="../../quick-ui/src/assets/img/theme/light/no-img-upload-yet.jpg" alt="no image" style="max-width: 500px; max-height: 500px;">
     <%end%>
     <div class="card-body">
       <h5 class="card-title"><%= @inventory.name %></h5>
@@ -27,7 +27,7 @@
 
 
   <div class="row justify-content-center">
-    <div class="col-4 mt-4">
+    <div class="col-5 mt-4">
       <div class="card text-center mb-5 bg-black rounded">
 
         <div>
