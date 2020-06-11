@@ -5,21 +5,28 @@
         <div class="form-group row">
           <%= f.label :name, class: "col-2 col-form-label text-white" %>
           <div class="col-10">
-            <%= f.text_field :name, class: "form-control rounded", placeholder: "Name of inventory" %>
+            <%= f.text_field :name, class: "form-control rounded" %>
           </div>
         </div>
 
         <div class="form-group row">
           <%= f.label :location, class: "col-2 col-form-label text-white" %>
           <div class="col-10"> 
-            <%= f.text_area :location, rows: 2, class: "form-control", placeholder: "Location of inventory" %>
+            <%= f.text_area :location, rows: 2, class: "form-control", placeholder: "Where can we find this?" %>
           </div>
         </div>
 
         <div class="form-group row">
           <%= f.label "Additional Info", class: "col-2 col-form-label text-white" %>
           <div class="col-10"> 
-            <%= f.text_area :info, rows: 3, class: "form-control rounded", placeholder: "Add any additional helpful info" %>
+            <%= f.text_area :info, rows: 3, class: "form-control rounded", placeholder: "Add any helpful tips" %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label "Upload picture", class: "col-2 col-form-label text-white" %>
+          <div class="col-10"> 
+            <%= f.file_field :picture, class: "control-label mt-1", accept: 'image/jpeg,image/gif,image/png' %>
           </div>
         </div>
 

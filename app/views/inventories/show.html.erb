@@ -1,29 +1,40 @@
 <div>
-<h2 class="text-center mt-4"><%= @inventory.name %></h2>
 
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-8 mt-4">
-      <div class="card text-center shadow mb-5 bg-gradient-dark rounded">
+      <div class="card text-center shadow mb-5 bg-black rounded">
 
         <div class="card-body">
-          <h5 class="text-white">Location:</h5>
-          <div class="card-text text-center text-white"><%= @inventory.location %></div>
+          <div class="h4 card-text text-center text-white"><%= @inventory.name %></div>
+          <hr>
+          <div class="text-white p">Location:</div>
+          <div class="card-text text-center text-white p "><%= @inventory.location %></div>
         </div>
-        
-        <%if @inventory.info != ""  %>
+          <hr>
+        <%if @inventory.info? %>
           <div class="card-body">
-            <h5 class="text-white">More info:</h5>
+            <div class="text-white p">More info:</div>
             <div class="card-text text-center text-white"><%= @inventory.info %></div>
             <br>
           </div>
+          <hr>
         <% end %>
+
+
+        <%if @inventory.picture?  %>
+          <div class="card-body">
+            <div class="card-text text-center text-white"><%= image_tag(@inventory.picture.url, style: "max-width: 600px; max-height: 600px;", class: "container") %></div>
+            <br>
+          </div>
+        <% end %>
+
 
         <div>
         <% if @inventory.services.any? %>
             <h5 class="text-white">Services:</h5>
             <%@inventory.services.each do |i|%>
-            <span class="badge badge-warning"><%=link_to i.name.upcase, service_path(i) %></span>
+            <span class="badge badge-white"><%=link_to i.name.upcase, service_path(i) %></span>
             <% end %>
             </br>
             </br>

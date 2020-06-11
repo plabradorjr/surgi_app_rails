@@ -24,6 +24,11 @@
                 <td scope="row" class="bg-white"><a href="/inventories/<%=i.id%>" class="text-dark"><%= i.name %></a></td>
               </tr>
             <% end %>
+            <% if !@inventory_results.any? %>
+              <tr>
+                <td scope="row" class="bg-warning text-white"><a>No results within Inventories Database</a></td>
+              </tr>
+            <%end%>
 
           </tbody>
         </table>
@@ -41,9 +46,14 @@
                 <td scope="row" class="bg-white"><a href="/memos/<%=i.id%>" class="text-dark"><%= i.title %></a></td>
               </tr>
             <% end %>
-
+            <% if !@memo_results.any? %>
+              <tr>
+                <td scope="row" class="bg-warning text-white"><a>No results within Memo Database</a></td>
+              </tr>
+            <%end%>
           </tbody>
         </table>
+        
 
         <br><br>
 
