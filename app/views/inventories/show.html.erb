@@ -1,34 +1,34 @@
 <div>
 
-<div class="container">
+<div class="container d-flex justify-content-center pt-5">
+
+  <div class="card mb-3">
+    <%if @inventory.picture? %>
+      <%= image_tag(@inventory.picture.url, class: "card-img-top", style: "max-width: 500px; max-height: 500px;")%>
+    <%else%>
+      <img class="card-img-top" src="../../quick-ui/src/assets/img/theme/light/no-img-upload-yet.jpg" alt="no image" style="max-width: 400px; max-height: 400px;">
+    <%end%>
+    <div class="card-body">
+      <h5 class="card-title"><%= @inventory.name %></h5>
+      <small class="card-text"> Location:</small>
+      <p class="card-text"><%=@inventory.location %></p>
+
+    </div>
+
+    <p class="card-footer"><small class="text-muted">Created <%= time_ago_in_words(@inventory.created_at) %> ago, by: <%= @inventory.user.username.capitalize %>.
+      edited <%= time_ago_in_words(@inventory.updated_at) %> ago</small>
+      
+    </p>
+  </div>
+</div>
+
+
+
+
+
   <div class="row justify-content-center">
-    <div class="col-8 mt-4">
-      <div class="card text-center shadow mb-5 bg-black rounded">
-
-        <div class="card-body">
-          <div class="h4 card-text text-center text-white"><%= @inventory.name %></div>
-          <hr>
-          <div class="text-white p">Location:</div>
-          <div class="card-text text-center text-white p "><%= @inventory.location %></div>
-        </div>
-          <hr>
-        <%if @inventory.info? %>
-          <div class="card-body">
-            <div class="text-white p">More info:</div>
-            <div class="card-text text-center text-white"><%= @inventory.info %></div>
-            <br>
-          </div>
-          <hr>
-        <% end %>
-
-
-        <%if @inventory.picture?  %>
-          <div class="card-body">
-            <div class="card-text text-center text-white"><%= image_tag(@inventory.picture.url, style: "max-width: 600px; max-height: 600px;", class: "container") %></div>
-            <br>
-          </div>
-        <% end %>
-
+    <div class="col-4 mt-4">
+      <div class="card text-center mb-5 bg-black rounded">
 
         <div>
         <% if @inventory.services.any? %>
@@ -43,12 +43,8 @@
   
 
         <div class="card-footer text-muted">
-          <small>Created <%= time_ago_in_words(@inventory.created_at) %> ago, by: <%= @inventory.user.username.capitalize %>, </br>
-          edited <%= time_ago_in_words(@inventory.updated_at) %> ago</small>
-          </br>
-          </br>
-          <%= link_to "Edit", edit_inventory_path(@inventory), class: "btn-sm btn-white" %>
-          <%= link_to "Delete", inventory_path(@inventory), class: "btn-sm btn-white", method: :delete, data: {confirm: "Are you sure?"} if current_user == @inventory.user%>
+          <%= link_to "Edit", edit_inventory_path(@inventory), class: "btn btn-sm btn-outline-warning" %>
+          <%= link_to "Delete", inventory_path(@inventory), class: "btn btn-sm btn-outline-warning", method: :delete, data: {confirm: "Are you sure?"} if current_user == @inventory.user%>
         </div>
       </div>
     </div>

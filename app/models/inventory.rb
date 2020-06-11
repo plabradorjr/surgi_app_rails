@@ -5,7 +5,7 @@ class Inventory < ApplicationRecord
     has_many :services, through: :inventory_services
 
     validates :name, presence: true, length: { minimum: 1, maximum: 50 }
-    validates :location, presence: true, length: { minimum: 1, maximum: 100 }
+    validates :location, presence: true, length: { minimum: 1, maximum: 200 }
     validates_uniqueness_of :name, :case_sensitive => false
 
 
