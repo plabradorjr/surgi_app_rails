@@ -68,3 +68,5 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'aws-sdk'
