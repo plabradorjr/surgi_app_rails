@@ -13,6 +13,13 @@
       <small class="card-text"> Location:</small>
       <p class="card-text"><%=@inventory.location %></p>
 
+      <% if @inventory.services.any? %>
+            <small class="card-text">Services:</small> <br>
+            <%@inventory.services.each do |i|%>
+            <span class="card-text"><%=link_to i.name, service_path(i), class: "small text-white" %></span>
+            <% end %>
+      <% end %>
+
     </div>
 
     <p class="card-footer"><small class="text-muted">Created <%= time_ago_in_words(@inventory.created_at) %> ago, by: <%= @inventory.user.username.capitalize %>.
@@ -27,19 +34,8 @@
 
 
   <div class="row justify-content-center">
-    <div class="col-5 mt-4">
-      <div class="card text-center mb-5 bg-black rounded">
-
-        <div>
-        <% if @inventory.services.any? %>
-            <h5 class="text-white">Services:</h5>
-            <%@inventory.services.each do |i|%>
-            <span class="badge badge-white"><%=link_to i.name.upcase, service_path(i) %></span>
-            <% end %>
-            </br>
-            </br>
-        <% end %>
-        <div>
+    <div class="col-10 mt-4">
+      <div class="text-center mb-5 bg-black rounded">
   
 
         <div class="card-footer text-muted">
