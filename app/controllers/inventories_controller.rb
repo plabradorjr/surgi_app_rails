@@ -21,13 +21,6 @@ class InventoriesController < ApplicationController
     def create
         @inventory = Inventory.new(inventory_params)
         @inventory.user = current_user
-
-        if params[:image_id].present?
-            preloaded = Cloudinary::PreloadedFile.new(params[:image_id])         
-            raise "Invalid upload signature" if !preloaded.valid?
-            @inventory.image_id = preloaded.identifier
-        end
-        
         if @inventory.save
             flash[:success] = "Success! Inventory saved."
             redirect_to @inventory

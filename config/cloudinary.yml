@@ -1,6 +1,0 @@
-production:
-  cloud_name: "dhnaypdqu"
-  api_key: "465211637921197"
-  api_secret: "1iHKfuCBE9yiA6xm9F7sSucSRMg"
-  secure: true
-  cdn_subdomain: true

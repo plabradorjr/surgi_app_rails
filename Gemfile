@@ -72,5 +72,8 @@ gem 'mini_magick'
 # gem 'aws-sdk'
 # gem "aws-sdk-s3", require: false
 # gem 'fog-aws'
+# gem 'cloudinary'
 
-gem 'cloudinary'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
