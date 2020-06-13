@@ -10,8 +10,8 @@
         </div>
         
           <div class="container">
-            <h5 class="text-white"><hr></h5>
-            <textarea disabled rows="14" class="text-white container bg-black"><%= @memo.description %></textarea>
+            <h5 class="text-dark"><hr></h5>
+            <textarea disabled rows="15" class="small text-dark container bg-white rounded"><%= @memo.description %></textarea>
             <br>
           </div>
 
@@ -19,7 +19,7 @@
         <% if @memo.services.any? %>
             <h5 class="text-white">Services:</h5>
             <%@memo.services.each do |i|%>
-            <span class="badge badge-warning"><%=link_to i.name.upcase, service_path(i) %></span>
+            <span class="badge badge-white"><%=link_to i.name.upcase, service_path(i) %></span>
             <% end %>
             </br>
             </br>
