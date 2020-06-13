@@ -69,6 +69,6 @@ gem 'omniauth-twitter'
 gem 'carrierwave'
 gem 'mini_magick'
 
-gem 'aws-sdk'
-gem "aws-sdk-s3", require: false
-gem 'fog-aws'
+# gem 'aws-sdk'
+# gem "aws-sdk-s3", require: false
+# gem 'fog-aws'
