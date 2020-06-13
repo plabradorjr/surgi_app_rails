@@ -3,21 +3,21 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-10 mt-4">
-      <div class="card text-center shadow mb-5 bg-gradient-dark rounded">
+      <div class="card text-center shadow mb bg-dark rounded">
 
         <div class="card-body">
           <div class="h5 card-text text-center text-white"><%= @memo.title %></div>
         </div>
         
           <div class="container">
-            <h5 class="text-dark"><hr></h5>
+            <h5 class="text-dark"></h5>
             <textarea disabled rows="15" class="small text-dark container bg-white rounded"><%= @memo.description %></textarea>
             <br>
           </div>
 
         <div>
         <% if @memo.services.any? %>
-            <h5 class="text-white">Services:</h5>
+            <p class="text-white">Services:</p>
             <%@memo.services.each do |i|%>
             <span class="badge badge-white"><%=link_to i.name.upcase, service_path(i) %></span>
             <% end %>
