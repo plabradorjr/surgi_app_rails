@@ -3,6 +3,9 @@
 <div class="container d-flex justify-content-center pt-5">
 
   <div class="card bg-white">
+
+    <%= cl_image_tag(@inventory.image_id) if @inventory.image_id? %>
+
     <%if @inventory.picture? %>
       <%= image_tag(@inventory.picture.url, class: "card-img-top", style: "max-width: 500px; max-height: 500px;")%>
     <%else%>

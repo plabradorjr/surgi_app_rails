@@ -21,8 +21,15 @@ class InventoriesController < ApplicationController
     def create
         @inventory = Inventory.new(inventory_params)
         @inventory.user = current_user
+
+        if params[:image_id].present?
+            preloaded = Cloudinary::PreloadedFile.new(params[:image_id])         
+            raise "Invalid upload signature" if !preloaded.valid?
+            @inventory.image_id = preloaded.identifier
+        end
+        
         if @inventory.save
-            flash[:success] = "Successfully Saved Inventory! Woot!"
+            flash[:success] = "Success! Inventory saved."
             redirect_to @inventory
         else
             flash[:notice] = "Sorry, 'Name' and 'Location' cannot be blank."
@@ -64,7 +71,7 @@ class InventoriesController < ApplicationController
     end
 
     def inventory_params
-        params.require(:inventory).permit(:name, :location, :info, :picture, service_ids: [])
+        params.require(:inventory).permit(:name, :location, :info, :picture, :image_id, service_ids: [])
     end
 
     def require_same_user
