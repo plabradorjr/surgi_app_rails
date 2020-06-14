@@ -27,7 +27,7 @@
   
 
         <div class="card-footer text-muted">
-          <small>Created by <%= @memo.user.username %>, on <%= (@memo.created_at).to_time.strftime('%B %e at %l:%M %p') %> </br>
+          <small>Created by <%= @memo.user.username %>, on <%= (@memo.created_at).to_time.strftime('%B %e %Y at %l:%M %p') %> </br>
           edited <%= time_ago_in_words(@memo.updated_at) %> ago</small>
           </br>
           </br>

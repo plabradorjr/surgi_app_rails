@@ -22,7 +22,7 @@
 
     </div>
 
-    <p class="card-footer bg-white"><small class="text-dark">Created by <%= @inventory.user.username %>, on <%= (@inventory.created_at).to_time.strftime('%B %e at %l:%M %p') %> </br>
+    <p class="card-footer bg-white"><small class="text-dark">Created by <%= @inventory.user.username %>, on <%= (@inventory.created_at).to_time.strftime('%B %e %Y at %l:%M %p') %> </br>
           edited <%= time_ago_in_words(@inventory.updated_at) %> ago</small>
     </p>
   </div>
