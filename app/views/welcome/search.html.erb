@@ -1,20 +1,36 @@
   
   
   <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <br><span class="h4 text-secondary">Search Results: </span><br><br>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-9 text-center m-5">
+                    <form action="/search" method="get">
+                        <div class="form-group bg-secondary rounded-pill mb-0 px-2 py-2 shadow">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="input-group input-group-merge shadow-none">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text bg-transparent border-0"><i data-feather="search"></i></span>
+                                        </div>
+                                        <input class="form-control form-control-flush shadow-none" type="text" name="search" placeholder="Search again ...">
+
+                                        <div class="col-auto">
+                                        <button class="btn btn-block btn-dark rounded-pill" type="submit">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>        </div>
 
 
       </div>
       <div class="col text-center">
         <br>
         
-        <table class="table table-dark col-6 float-left">
+        <table class="table table-dark col">
           <thead>
             <tr>
-              <th class="text-white" scope="col">Inventories</th>
+              <th class="text-white" scope="col">Search Results:</th>
             </tr>
           </thead>
 
@@ -24,36 +40,21 @@
                 <td scope="row" class="bg-white"><a href="/inventories/<%=i.id%>" class="text-dark"><%= i.name %></a></td>
               </tr>
             <% end %>
-            <% if !@inventory_results.any? %>
-              <tr>
-                <td scope="row" class="bg-warning text-black"><a>No results</a></td>
-              </tr>
-            <%end%>
+            </tbody>
 
-          </tbody>
-        </table>
-
-        <table class="table table-dark col-6 float-right">
-          <thead>
-            <tr>
-              <th class="text-white" scope="col">Memos</th>
-            </tr>
-          </thead>
-
-          <tbody>
+            <tbody>
             <% @memo_results.each do |i| %>
               <tr>
                 <td scope="row" class="bg-white"><a href="/memos/<%=i.id%>" class="text-dark"><%= i.title %></a></td>
               </tr>
             <% end %>
-            <% if !@memo_results.any? %>
+            <% if !@memo_results.any? && !@inventory_results.any?%>
               <tr>
-                <td scope="row" class="bg-warning text-black"><a>No results</a></td>
+                <td scope="row" class="bg-warning text-black"><a>Sorry, we don't have that in our database.</a></td>
               </tr>
             <%end%>
           </tbody>
         </table>
-        
 
         <br><br>
 
