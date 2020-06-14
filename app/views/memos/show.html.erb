@@ -5,13 +5,12 @@
     <div class="col-10 mt-4">
       <div class="card text-center shadow mb bg-dark rounded">
 
-        <div class="card-body">
+        <div class="card-body pb-0">
           <div class="h5 card-text text-center text-white"><%= @memo.title %></div>
         </div>
         
-          <div class="container">
-            <h5 class="text-dark"></h5>
-            <textarea disabled rows="15" class="small text-dark container bg-white rounded"><%= @memo.description %></textarea>
+          <div class="card-body">
+            <textarea disabled rows="18" class="small text-dark card-body col bg-white rounded"><%= @memo.description %></textarea>
             <br>
           </div>
 
@@ -28,7 +27,7 @@
   
 
         <div class="card-footer text-muted">
-          <small>Created <%= time_ago_in_words(@memo.created_at) %> ago, by: <%= @memo.user.username.capitalize %>, </br>
+          <small>Created by <%= @memo.user.username %>, on <%= (@memo.created_at).to_time.strftime('%B %e at %l:%M %p') %> </br>
           edited <%= time_ago_in_words(@memo.updated_at) %> ago</small>
           </br>
           </br>
