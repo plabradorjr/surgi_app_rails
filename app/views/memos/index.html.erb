@@ -25,7 +25,12 @@
           <% end %>
         </table>
         <br><br>
-        <%= will_paginate @memos %>
+        <div class="small">
+            <%= page_entries_info @memos %>
+        </div>
+        <div class="row justify-content-center">
+          <%= will_paginate @memos %>
+        </div>
 
       </div>
     </div>

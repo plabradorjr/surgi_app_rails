@@ -12,11 +12,14 @@
       <h5 class="card-title text-dark"><%= @inventory.name %></h5>
       <small class="card-text text-dark"> Location:</small>
       <p class="small card-text text-dark"><%=@inventory.location %></p>
-
+      <% if @inventory.info?%>
+      <small class="card-text text-dark"> More info:</small>
+      <p class="small card-text text-dark"><%=@inventory.info %></p>
+      <% end %>
       <% if @inventory.services.any? %>
             <small class="card-text text-dark">Services:</small> <br>
             <%@inventory.services.each do |i|%>
-            <span class="card-text text-dark"><%=link_to i.name, service_path(i), class: "small text-blue" %></span>
+            <span class="card-text text-dark"><u><%=link_to i.name, service_path(i), class: "small text-blue" %></u></span>
             <% end %>
       <% end %>
 
