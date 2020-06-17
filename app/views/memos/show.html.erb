@@ -2,13 +2,17 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-10 mt-4">
+    <div class="col-8 mt-4">
       <div class="card text-center shadow mb bg-dark rounded">
 
         <div class="card-body p-3">
           <div class="h5 card-text text-center text-white"><%= @memo.title %></div>
         </div>
-        
+
+          <div class="justify-content-center">
+          <%= image_tag(@memo.picture.url, class: "card-img", style: "max-width: 800px; max-height: 800px;") if @memo.picture?%>
+          </div>
+
           <div class="card-body bg-white rounded p-0 m-0">
             <textarea disabled style="color:black;" rows="18" class="small card-body col bg-white rounded"><%= @memo.description %></textarea>
             <br>

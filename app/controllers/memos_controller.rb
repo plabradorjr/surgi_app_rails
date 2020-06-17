@@ -64,7 +64,7 @@ class MemosController < ApplicationController
     end
 
     def memo_params
-        params.require(:memo).permit(:title, :description, service_ids: [])
+        params.require(:memo).permit(:title, :description, :picture, service_ids: [])
     end
 
     def require_same_user

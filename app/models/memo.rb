@@ -7,6 +7,8 @@ class Memo < ApplicationRecord
     validates :title, presence: true
     validates :description, presence: true
 
+    mount_uploader :picture, PictureUploader
+
     def self.search(search)
         if search
           find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
