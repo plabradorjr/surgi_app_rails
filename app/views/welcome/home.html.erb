@@ -17,7 +17,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text bg-transparent border-0"><i data-feather="search"></i></span>
                                         </div>
-                                        <input class="form-control form-control-flush shadow-none" type="text" name="search" placeholder="Search for answers ...">
+                                        <input class="form-control form-control-flush shadow-none" type="text" name="search" placeholder="Search our database ...">
 
                                         <div class="col-auto">
                                         <button class="btn btn-block btn-dark rounded-pill" type="submit">Search</button>
@@ -35,12 +35,12 @@
         </div>
         <div class="container position-relative zindex-100">
             <div class="my-5 text-center">
-                <h6 class="text-white font-weight-light mb-0">or choose from any options below to get started</h6>
+                <h6 class="text-white font-weight-light mb-0">Or help expand our database by creating an inventory or memo below:</h6>
             </div>
             <!-- Categories -->
             <div class="row justify-content-center">
                 <div class="col-lg-9 col-xl-12">
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <div class="col-xl-3 col-lg-6 mb-xl-n8">
                             <div class="card hover-translate-y-n10 hover-shadow-lg">
                                 <div class="card-body p-5 text-center">
@@ -48,7 +48,7 @@
                                         <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Settings.svg" class="svg-inject img-fluid" style="height: 40px">
                                     </div>
                                     <div class="pt-2">
-                                        <a href="/inventories" class="h6 stretched-link mb-0">View Inventories</a>
+                                        <a href="<%= new_user_inventory_path(current_user) %>" class="h6 stretched-link mb-0">Create Inventory</a>
                                     </div>
                                 </div>
                             </div>
@@ -60,31 +60,7 @@
                                         <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Folder.svg" class="svg-inject img-fluid" style="height: 40px">
                                     </div>
                                     <div class="pt-2">
-                                        <a href="/memos" class="h6 stretched-link mb-0">View Memos</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 mb-xl-n8">
-                            <div class="card hover-translate-y-n10 hover-shadow-lg">
-                                <div class="card-body p-5 text-center">
-                                    <div class="pb-4">
-                                        <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Like_UI.svg" class="svg-inject img-fluid" style="height: 40px">
-                                    </div>
-                                    <div class="pt-2">
-                                        <%= link_to "Create Inventory", new_user_inventory_path(current_user), class: "text-white"%>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 mb-xl-n8">
-                            <div class="card hover-translate-y-n10 hover-shadow-lg">
-                                <div class="card-body p-5 text-center">
-                                    <div class="pb-4">
-                                        <img alt="Image placeholder" src="quick-ui/src/assets/img/svg/icons/Like_UI.svg" class="svg-inject img-fluid" style="height: 40px">
-                                    </div>
-                                    <div class="pt-2">
-                                        <%= link_to "Create Memo", new_user_memo_path(current_user), class: "text-white"%>
+                                        <a href="<%=new_user_memo_path(current_user)%>" class="h6 stretched-link mb-0">Create Memo</a>
                                     </div>
                                 </div>
                             </div>

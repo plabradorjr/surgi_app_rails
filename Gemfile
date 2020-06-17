@@ -66,8 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'carrierwave'
-gem 'mini_magick'
 
 # gem 'aws-sdk'
 # gem "aws-sdk-s3", require: false
@@ -76,4 +74,4 @@ gem 'mini_magick'
 
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'fog'
+gem 'fog-aws'
