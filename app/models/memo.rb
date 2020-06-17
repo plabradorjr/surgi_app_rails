@@ -5,7 +5,7 @@ class Memo < ApplicationRecord
     has_many :services, through: :memo_services
 
     validates :title, presence: true
-    validates :description, presence: true
+    # validates :description, presence: true
 
     mount_uploader :picture, PictureUploader
 
