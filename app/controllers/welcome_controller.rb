@@ -16,7 +16,7 @@ class WelcomeController < ApplicationController
         if params[:search] == ""
             render 'home'
         else
-            x = params[:search].downcase
+            x = params[:search].downcase.strip
             @inventory_results = Inventory.where("LOWER(name) LIKE?", "%#{x}%")
             @memo_results = Memo.where("LOWER(title) LIKE?", "%#{x}%")
         end
