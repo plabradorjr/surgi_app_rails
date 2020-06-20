@@ -11,6 +11,8 @@ run `rails db:migrate`
 
 next `rails db:seed`
 
+install imagemagick if not already installed in your system by running `brew install imagemagick`
+
 then `rails s` and head to the specified port.
 
 ## Specs: 
