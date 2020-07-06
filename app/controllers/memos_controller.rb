@@ -26,7 +26,6 @@ class MemosController < ApplicationController
             flash[:success] = "Successfully Saved Memo! Woot!"
             redirect_to @memo
         else
-            flash[:notice] = "Sorry, 'Title' and 'Description' cannot be blank."
             render 'new'
         end
     end

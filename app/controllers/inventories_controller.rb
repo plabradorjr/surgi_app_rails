@@ -25,7 +25,6 @@ class InventoriesController < ApplicationController
             flash[:success] = "Success! Inventory saved."
             redirect_to @inventory
         else
-            flash[:notice] = "Sorry, 'Name' and 'Location' cannot be blank."
             render 'new'
         end
     end

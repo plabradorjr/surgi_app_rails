@@ -1,5 +1,15 @@
 <div class="container">
   <div class="row justify-content-center">
+
+    <% if @inventory.errors.any? %>
+      <p class="text-danger">The following errors prevented the article from being saved: </p>
+      <ul>
+        <% @inventory.errors.full_messages.each do |msg| %>
+          <li class="text-warning"><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
     <div class="col-10 pt-4 bg-brand-facebook rounded">
       <%= form_for(@inventory) do |f| %>
         <div class="form-group row small">
