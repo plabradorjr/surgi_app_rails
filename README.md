@@ -1,6 +1,6 @@
 # 🦦 SurgiWiki v0.0
 
-live site: [surgi.wiki](https://www.surgi.wiki/)
+## Live site: [surgi.wiki](https://www.surgi.wiki/)
 
 # This is a Flatiron School Project on Ruby-on-Rails Framework
 
