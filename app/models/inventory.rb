@@ -19,5 +19,7 @@ class Inventory < ApplicationRecord
         end
     end
 
+    scope :west_core, -> { where(location: '7 West Core') } 
+
 
 end
