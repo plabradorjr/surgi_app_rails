@@ -1,5 +1,7 @@
 # 🦦 SurgiWiki v0.0
 
+live site: [surgi.wiki](https://www.surgi.wiki/)
+
 # This is a Flatiron School Project on Ruby-on-Rails Framework
 
 # Installation
@@ -66,3 +68,8 @@ This project is intended to be a safe, welcoming space for collaboration, and co
 
 ## MIT License
 The code is available as open source under the terms of the MIT License.
+
+## Video Walkthrough
+
+[![Watch the video](https://cdn.pixabay.com/photo/2016/11/18/11/17/social-1834016_960_720.png)](https://youtu.be/MkMiXls_E7g)
+
