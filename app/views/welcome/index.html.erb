@@ -71,10 +71,7 @@
                                 <div class="py-3 row justify-content-center"><small>Not registered?</small>
 
                                     <div class="col-sm-12 mt-2">
-                                        <a href="/users/sign_up" class="btn btn-block btn-neutral btn-icon mb-3 mb-sm-0" role="button">
-                                            create an account
-                                            <%# <span class="btn-inner--text">Create an account</span> %>
-                                        </a>
+                                            <%= link_to "create an account", new_user_registration_path, method: "get", class: "btn btn-block btn-neutral mb-3"%>
                                     </div>
 
                                 </div>
